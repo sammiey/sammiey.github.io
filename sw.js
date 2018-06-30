@@ -59,8 +59,7 @@ self.addEventListener("activate", function(event) {
           keyList.map(function(key) {
             if (key !== cacheName) {
               log("[ServiceWorker] Removing old cache ", key);
-              //if key doesn`t matches with present key
-              return caches.delete(key);
+              // todo: delete stale cache content
             }
           })
         );
